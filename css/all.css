@@ -1,0 +1,232 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}
+legend{color:#000}
+body{
+    font-size: 12px;
+    color: #666;
+}
+a{
+    text-decoration: none;
+    color: #999;
+}
+.main{
+    width: 100%;
+    height: 650px;
+    background: url("../images/bg.jpg") center top;
+    position: relative;
+    /*background-color: palegreen;*/
+}
+.main .head{
+    height: 120px;
+    width: 980px;
+    margin: 0 auto;
+    padding-top: 22px;
+    box-sizing: border-box;
+    /*background-color: palevioletred;*/
+}
+.main .head h1{
+    height: 75px;
+    width: 173px;
+    float: left;
+    background-color: yellow;
+}
+.main .head h1 a{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background: url("../images/logo.jpg");
+}
+.main .nav{
+    height: 60px;
+    width: 980px;
+    margin: 0 auto;
+    background-image: url("../images/nav-right.jpg") ,url("../images/nav-left.jpg"), url("../images/nav-center.jpg");
+    background-repeat: no-repeat,no-repeat,repeat-x;
+    background-position: right top, left top, left top;
+
+}
+.main .nav li{
+    height: 45px;
+    width: 104px;
+    /*background-color: palevioletred;*/
+    float: left;
+    text-align: center;
+    font-size: 12px;
+    background: url("../images/nav-line.jpg") no-repeat right center;
+}
+.main .nav li a{
+    line-height: 45px;
+    color: white;
+    text-decoration: none;
+}
+.main .nav li:first-child{
+    margin-left: 20px;
+}
+.main .nav li a:hover{
+    text-decoration: underline;
+}
+.main  .banner{
+    /*980*382*/
+    height: 382px;
+    width: 980px;
+    margin: 0 auto;
+    /*background-color: palevioletred;*/
+    background: url("../images/banner.jpg");
+}
+.main .footer {
+    width: 980px;
+    /*height: 500px;*/
+    position: absolute;
+    left: 50%;
+    margin-left: -500px;
+    top:560px;
+    /*background-color: pink;*/
+}
+.main .content{
+    height: 302px;
+    width: 100%;
+    background:url("../images/con-down-bg.jpg");
+}
+.main .content .bg{
+    background: url("../images/con-down-line.jpg") no-repeat right center;
+}
+.main .content>ul{
+    height: 92px;
+    width: 100%;
+    padding: 7px 7px 0 7px;
+    box-sizing: border-box;
+    background-color:white;
+}
+.main .content>ul li{
+    float: left;
+    height: 84px;
+    width: 236px;
+    margin-right: 7px;
+    /*background-color: darkturquoise;*/
+    background: url("../images/con-top-item.jpg");
+}
+.main .content ul li:last-child{
+    margin-right: 0;
+}
+.main .content ul li a{
+    display: inline-block;
+    height: 30px;
+    width: 100%;
+    /*注意背景图片的显示效果与父元素盒子大小的关系
+    test文件就说明背景只会展示父元素一样的大小 并默认从左上角开始平铺
+    */
+    background: url("../images/con-top-spirit.jpg") no-repeat;
+    /*background-color: rebeccapurple;*/
+}
+.main .content ul li:nth-child(2) a{
+    background-position:  0 -30px ;
+}
+.main .content ul li:nth-child(3) a{
+    background-position:  0 -60px ;
+}
+.main .content ul li:nth-child(4) a{
+    background-position:  0 -90px ;
+}
+.main .content>ul li p{
+    font-size: 12px;
+    margin-left: 50px;
+}
+.main .content .about{
+    height: 210px;
+    width: 100%;
+    background-color: white;
+}
+.main .content .about .about_left{
+    float: left;
+    width: 323px;
+    height: 100%;
+    /*background-color: palegreen;*/
+}
+.main .content .about .top{
+    height: 70px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    /*background-color: red;*/
+}
+.main .content .about .top  a:first-child{
+    float: left;
+}
+.main .content .about .top a:last-child{
+    float: right;
+}
+.main .content .about .bottom{
+    height: 140px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    /*background-color: paleturquoise;*/
+}
+.main .content .about .about_left dl dt{
+    /*96*82*/
+    /*dt在这里只设置了高度 为了把文字挤到右边 宽度会被img撑起！*/
+    height: 120px;
+    float: left;
+    margin-right: 10px;
+}
+
+.main .content .about .about_center{
+    float: left;
+    width: 407px;
+    height: 100%;
+    /*background-color: peru;*/
+}
+.main .content .about .about_center ul li{
+    float: left;
+    margin-right: 8px;
+    text-align: center;
+}
+/*这里 li和a的大小都没设置 因为子元素img和p会将其自动撑大*/
+.main .content .about .about_center ul li img{
+    border: 1px solid #ccc;
+}
+.main .content .about .about_right{
+    float: left;
+    width: 250px;
+    height: 100%;
+    /*background-color: firebrick;*/
+}
+.main .content .about .about_right p{
+    line-height: 20px;
+}
+.main .footer .b_nav{
+    height: 34px;
+    width: 100%;
+    background: url("../images/sub-nav.jpg");
+}
+.main .footer .b_nav li{
+    float: left;
+    line-height: 34px;
+}
+
+.main .footer .b_nav li a{
+    color: white;
+    margin: 0 2px;
+}
+.main .footer .b_nav li:nth-child(1){
+    margin-left: 250px;
+}
+.main .footer .else{
+    height: 80px;
+    width: 100%;
+    padding-top: 20px;
+    box-sizing: border-box;
+    /*background-color: orangered;*/
+}
+.main .footer .else p{
+    float: left;
+    line-height: 20px;
+}
+.main .footer .else a{
+    float: right;
+}
